@@ -1,13 +1,14 @@
-package me.ameliajabir.algorithms;
+package me.ameliajabir.algorithms.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Problem {
 
-    private int id;
-    private String name;
-    private String description;
-    private List<Algorithm> algorithms;
+    private final int id;
+    private final String name;
+    private final String description;
+    private List<Algorithm> algorithms = new ArrayList<>();
 
     public Problem(int id, String name, String description) {
         this.id = id;
@@ -32,4 +33,15 @@ public class Problem {
         return description;
     }
 
+    public void addAlgorithm(Algorithm a) {
+        algorithms.add(a);
+    }
+
+    public List<Algorithm> getAlgorithms() {
+        return algorithms;
+    }
+
+    public void setAlgorithms(List<Algorithm> algorithms) {
+        this.algorithms = algorithms;
+    }
 }
