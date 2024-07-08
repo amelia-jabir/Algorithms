@@ -5,13 +5,11 @@ import me.ameliajabir.algorithms.model.Problem;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import(AlgorithmConfig.class)
 public class ProblemConfig {
 
-    final ApplicationContext applicationContext;
+    private final ApplicationContext applicationContext;
 
     public ProblemConfig(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
