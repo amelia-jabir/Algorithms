@@ -7,17 +7,19 @@ public class Problem {
 
     private final int id;
     private final String name;
+    private final String displayname;
     private final String description;
     private List<Algorithm> algorithms = new ArrayList<>();
 
-    public Problem(int id, String name, String description) {
+    public Problem(int id, String name, String displayname, String description) {
         this.id = id;
         this.name = name;
+        this.displayname = displayname;
         this.description = description;
     }
 
-    public Problem(int id, String name, String description, List<Algorithm> algorithms) {
-        this(id, name, description);
+    public Problem(int id, String name, String description, String displayname, List<Algorithm> algorithms) {
+        this(id, name, displayname, description);
         this.algorithms = algorithms;
     }
 
@@ -43,5 +45,13 @@ public class Problem {
 
     public void setAlgorithms(List<Algorithm> algorithms) {
         this.algorithms = algorithms;
+    }
+
+    public String getDisplayname() {
+        return displayname;
+    }
+
+    public String getUri() {
+        return name.trim().replaceAll("(\\s|_)+", "-").toLowerCase();
     }
 }

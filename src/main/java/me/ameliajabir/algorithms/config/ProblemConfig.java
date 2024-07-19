@@ -18,7 +18,7 @@ public class ProblemConfig {
     @Bean
     public Problem findBiggestNumber() {
 
-        Problem findBiggestNumber = new Problem(1, "Find Biggest Number", "Finds the biggest number in a list");
+        Problem findBiggestNumber = new Problem(1, "FIND_BIGGEST_NUMBER", "Find Biggest Number", "Finds the biggest number in a list");
         findBiggestNumber.addAlgorithm((Algorithm) applicationContext.getBean("linearSearch"));
 
         return findBiggestNumber;

@@ -1,0 +1,34 @@
+h1, h2 {
+    font-family: Montserrat, serif;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.container {
+    margin-top: 5rem;
+}
+
+.problem-forward {
+    font-size: 28px;
+    color: black;
+}
+
+.problem-forward:hover {
+    font-weight: 500;
+}
+
+.problem-forward div {
+    border: black 2px solid;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.problem-forward:hover div {
+    border: #000000 3px solid;
+    border-radius: 15px;
+    text-align: center;
+}
